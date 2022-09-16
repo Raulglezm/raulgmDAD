@@ -28,11 +28,15 @@ public class GestorFichero {
 
     public GestorFichero() {
         fc = new JFileChooser();
-        archivo = new Archivo();
     }
 
-    public void Guardar() {
-
+    public void Guardar(Archivo archivo) {
+        this.archivo = archivo;
+        fc.showSaveDialog(null);
+        path = fc.getSelectedFile().getPath();
+        if(path != null){ 
+            escrbirFichero();
+        }
     }
 
     public void Abrir() {
@@ -78,7 +82,8 @@ public class GestorFichero {
 
     public void escrbirFichero() {
         //inicializadores del writter
-        File f = new File("/tmp/salida.txt");
+        File f = new File(path);
+        fichero = archivo.getTextos();
 
         FileWriter fw = null;
         BufferedWriter bw = null;
@@ -88,6 +93,7 @@ public class GestorFichero {
             bw = new BufferedWriter(fw);
 
             for (String linea : fichero) {
+                System.out.println(linea);
                 bw.write(linea);
                 bw.newLine();
             }

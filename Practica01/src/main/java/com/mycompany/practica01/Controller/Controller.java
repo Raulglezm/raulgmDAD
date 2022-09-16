@@ -40,7 +40,7 @@ public class Controller implements ActionListener {
         }
 
         if (e.getSource()== this.view.btnGuardar) {
-            gf.Guardar();
+            gf.Guardar(this.archivo);
         }
 
         if (e.getSource() == this.view.btnAdd) {
@@ -61,6 +61,10 @@ public class Controller implements ActionListener {
             texto += txt + "\n";
         }
         return texto;
+    }
+    
+    public void Iniciar(){
+        this.view.setVisible(true);
     }
 
 }
