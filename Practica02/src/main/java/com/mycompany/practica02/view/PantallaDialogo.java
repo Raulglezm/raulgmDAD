@@ -5,11 +5,14 @@
  */
 package com.mycompany.practica02.view;
 
+import com.mycompany.practica02.controller.Controller;
+
 /**
  *
  * @author alumno
  */
 public class PantallaDialogo extends javax.swing.JDialog {
+    Controller controller;
 
     /**
      * Creates new form PantallaDialogo
@@ -30,35 +33,35 @@ public class PantallaDialogo extends javax.swing.JDialog {
 
         acto = new javax.swing.ButtonGroup();
         cocina = new javax.swing.ButtonGroup();
+        jPanel6 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jtxtNombre = new javax.swing.JTextField();
         jtxtApellido = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jPanel2 = new javax.swing.JPanel();
-        jSpinner1 = new javax.swing.JSpinner();
-        jLabel1 = new javax.swing.JLabel();
+        jRadioButtonBanquete = new javax.swing.JRadioButton();
+        jRadioButtonJornada = new javax.swing.JRadioButton();
+        jRadioButtonCongreso = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
+        jSpinnerAsistentes = new javax.swing.JSpinner();
+        jPanel2 = new javax.swing.JPanel();
+        jSpinnerFecha = new javax.swing.JSpinner();
+        jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jPanel7 = new javax.swing.JPanel();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jSpinner3 = new javax.swing.JSpinner();
-        jLabel5 = new javax.swing.JLabel();
+        jComboBoxCocina = new javax.swing.JComboBox<>();
+        jPanelOpcional = new javax.swing.JPanel();
+        jRadioButtonReservar = new javax.swing.JRadioButton();
+        jSpinnerJornadasCongreso = new javax.swing.JSpinner();
+        jLabelDuracioón = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBackground(new java.awt.Color(255, 230, 189));
+
+        jPanel1.setBackground(new java.awt.Color(255, 230, 189));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         jtxtNombre.setText("Nombre");
@@ -93,31 +96,37 @@ public class PantallaDialogo extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBackground(new java.awt.Color(255, 230, 189));
         jPanel5.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabel2.setFont(new java.awt.Font("Khmer OS System", 1, 12)); // NOI18N
         jLabel2.setText("TIPO DE ACTO: ");
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        acto.add(jRadioButton1);
-        jRadioButton1.setText("BANQUETE");
-        jRadioButton1.setToolTipText("El evento a realizar es un banquete");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButtonBanquete.setBackground(new java.awt.Color(255, 230, 189));
+        acto.add(jRadioButtonBanquete);
+        jRadioButtonBanquete.setText("BANQUETE");
+        jRadioButtonBanquete.setToolTipText("El evento a realizar es un banquete");
+        jRadioButtonBanquete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jRadioButtonBanqueteActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        acto.add(jRadioButton2);
-        jRadioButton2.setText("JORNADA");
-        jRadioButton2.setToolTipText("El evento a realizar es una jornada");
+        jRadioButtonJornada.setBackground(new java.awt.Color(255, 230, 189));
+        acto.add(jRadioButtonJornada);
+        jRadioButtonJornada.setText("JORNADA");
+        jRadioButtonJornada.setToolTipText("El evento a realizar es una jornada");
+        jRadioButtonJornada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonJornadaActionPerformed(evt);
+            }
+        });
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        acto.add(jRadioButton3);
-        jRadioButton3.setSelected(true);
-        jRadioButton3.setText("CONGRESO");
-        jRadioButton3.setToolTipText("El evento a realizar es un congreso");
+        jRadioButtonCongreso.setBackground(new java.awt.Color(255, 230, 189));
+        acto.add(jRadioButtonCongreso);
+        jRadioButtonCongreso.setSelected(true);
+        jRadioButtonCongreso.setText("CONGRESO");
+        jRadioButtonCongreso.setToolTipText("El evento a realizar es un congreso");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -128,31 +137,61 @@ public class PantallaDialogo extends javax.swing.JDialog {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
+                    .addComponent(jRadioButtonCongreso)
+                    .addComponent(jRadioButtonJornada)
+                    .addComponent(jRadioButtonBanquete))
                 .addGap(22, 22, 22))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton1)
+                .addComponent(jRadioButtonBanquete)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
-                    .addComponent(jRadioButton2))
+                    .addComponent(jRadioButtonJornada))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(jRadioButtonCongreso)
                 .addContainerGap())
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(255, 230, 189));
+
+        jLabel3.setFont(new java.awt.Font("Khmer OS System", 1, 12)); // NOI18N
+        jLabel3.setText("Nº de ASISTENTES: ");
+
+        jSpinnerAsistentes.setModel(new javax.swing.SpinnerNumberModel(25, null, null, 1));
+        jSpinnerAsistentes.setToolTipText("Cantidad de asistentes al acto");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSpinnerAsistentes, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jSpinnerAsistentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(255, 230, 189));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jSpinner1.setModel(new javax.swing.SpinnerDateModel());
-        jSpinner1.setToolTipText("Fecha prevista para el acto");
+        jSpinnerFecha.setModel(new javax.swing.SpinnerDateModel());
+        jSpinnerFecha.setToolTipText("Fecha prevista para el acto");
 
+        jLabel1.setFont(new java.awt.Font("Khmer OS System", 1, 12)); // NOI18N
         jLabel1.setText("FECHA DEL ACTO:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -163,7 +202,7 @@ public class PantallaDialogo extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSpinnerFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -172,151 +211,98 @@ public class PantallaDialogo extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner1))
+                    .addComponent(jSpinnerFecha))
                 .addGap(112, 112, 112))
         );
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(255, 230, 189));
 
-        jLabel3.setText("Nº de ASISTENTES: ");
-
-        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(25, null, null, 1));
-        jSpinner2.setToolTipText("Cantidad de asistentes al acto");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-
+        jLabel4.setFont(new java.awt.Font("Khmer OS System", 1, 12)); // NOI18N
         jLabel4.setText("COCINA: ");
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
-        cocina.add(jRadioButton4);
-        jRadioButton4.setText("PEDIR CITA");
-        jRadioButton4.setToolTipText("El evento se celebrará con la comida \npreestablecida entre el \njefe de cocina y el reservante");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxCocina.setEditable(true);
+        jComboBoxCocina.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO PRECISA", "PEDIR CITA", "A LA CARTA", "SIN COCINA" }));
+        jComboBoxCocina.setToolTipText("Tipo de banquete a reservar para el acto\n");
+        jComboBoxCocina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                jComboBoxCocinaActionPerformed(evt);
             }
         });
-
-        jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
-        cocina.add(jRadioButton5);
-        jRadioButton5.setText("A LA CARTA");
-        jRadioButton5.setToolTipText("El evento se celebrará con la \ncomida prestablecida por el local");
-
-        jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
-        cocina.add(jRadioButton6);
-        jRadioButton6.setText("BUFÉ");
-        jRadioButton6.setToolTipText("El evento se organizará \ncon un buffet de 20 platos");
-
-        jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
-        cocina.add(jRadioButton7);
-        jRadioButton7.setSelected(true);
-        jRadioButton7.setText("SIN COCINA");
-        jRadioButton7.setToolTipText("EL evento se celebrará sin cocina\n");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton7)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton4))
-                .addGap(32, 32, 32))
+                .addComponent(jComboBoxCocina, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jRadioButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton7)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-
-        jRadioButton8.setText("RESERVAR HABITACIÓN POR ASISTENTE");
-        jRadioButton8.setToolTipText("Reservar habitaciones \ndel local para el acto");
-
-        jSpinner3.setToolTipText("Días a reservar");
-
-        jLabel5.setText("JORNADAS DEL CONGRESO:");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                        .addComponent(jRadioButton8)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jComboBoxCocina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+
+        jPanelOpcional.setBackground(new java.awt.Color(255, 230, 189));
+
+        jRadioButtonReservar.setBackground(new java.awt.Color(255, 230, 189));
+        jRadioButtonReservar.setText("RESERVAR HABITACIÓN POR ASISTENTE");
+        jRadioButtonReservar.setToolTipText("Reservar habitaciones \ndel local para el acto");
+
+        jSpinnerJornadasCongreso.setToolTipText("Días a reservar");
+
+        jLabelDuracioón.setFont(new java.awt.Font("Khmer OS System", 1, 12)); // NOI18N
+        jLabelDuracioón.setText("JORNADAS DEL CONGRESO:");
+
+        javax.swing.GroupLayout jPanelOpcionalLayout = new javax.swing.GroupLayout(jPanelOpcional);
+        jPanelOpcional.setLayout(jPanelOpcionalLayout);
+        jPanelOpcionalLayout.setHorizontalGroup(
+            jPanelOpcionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOpcionalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelOpcionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelOpcionalLayout.createSequentialGroup()
+                        .addComponent(jRadioButtonReservar)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelOpcionalLayout.createSequentialGroup()
+                        .addComponent(jLabelDuracioón)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jSpinnerJornadasCongreso, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelOpcionalLayout.setVerticalGroup(
+            jPanelOpcionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOpcionalLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButton8)
+                .addComponent(jRadioButtonReservar)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelOpcionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelDuracioón)
+                    .addComponent(jSpinnerJornadasCongreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelOpcional, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -327,7 +313,18 @@ public class PantallaDialogo extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanelOpcional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -337,13 +334,17 @@ public class PantallaDialogo extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtApellidoActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jRadioButtonBanqueteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonBanqueteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jRadioButtonBanqueteActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void jComboBoxCocinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCocinaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_jComboBoxCocinaActionPerformed
+
+    private void jRadioButtonJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonJornadaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonJornadaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -390,29 +391,27 @@ public class PantallaDialogo extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup acto;
     private javax.swing.ButtonGroup cocina;
+    public javax.swing.JComboBox<String> jComboBoxCocina;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabelDuracioón;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JTextField jtxtApellido;
-    private javax.swing.JTextField jtxtNombre;
+    private javax.swing.JPanel jPanel6;
+    public javax.swing.JPanel jPanelOpcional;
+    public javax.swing.JRadioButton jRadioButtonBanquete;
+    public javax.swing.JRadioButton jRadioButtonCongreso;
+    public javax.swing.JRadioButton jRadioButtonJornada;
+    public javax.swing.JRadioButton jRadioButtonReservar;
+    public javax.swing.JSpinner jSpinnerAsistentes;
+    public javax.swing.JSpinner jSpinnerFecha;
+    public javax.swing.JSpinner jSpinnerJornadasCongreso;
+    public javax.swing.JTextField jtxtApellido;
+    public javax.swing.JTextField jtxtNombre;
     // End of variables declaration//GEN-END:variables
 }
