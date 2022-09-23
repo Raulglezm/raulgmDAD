@@ -1,0 +1,1 @@
+Aunque intenté añader elementos como imagenes, estos daban error debido a que el proyecto fue creado con maven.

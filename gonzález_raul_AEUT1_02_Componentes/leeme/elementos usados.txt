@@ -1,0 +1,17 @@
+Utilizé dos vistas: 
+1. En primer cuando lanzamos la app no escontramos con un jFrame, 
+que incluye un jPanel, dentro del jPanel nos encontramos 
+anidados dos elementos, un jPanel con una jLabel y por otro lado un boton que nos lleva a un jDialog.
+
+2. En este jDialog nos encontramos con un Jpanel que contiene 6 jPanels.
+
+- En el primer jPanel nos encontramos dos jTextField.
+
+- En el segundo jPanel nos encontramos con una jLabel, y tres jRadioButtons.
+
+- En el tercero y cuarto nos encontramos con una jLabel y un jSpinner.
+
+- En el quinto jPanel nos ncontramos una jLabel y un jcomboBox.
+
+- Por último en el sexto jPanel nos encontramos un jRadioButton una jLabel y un jSpinner.
+
