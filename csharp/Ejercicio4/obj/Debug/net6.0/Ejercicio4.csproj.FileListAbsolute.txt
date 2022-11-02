@@ -1,0 +1,15 @@
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/bin/Debug/net6.0/Ejercicio4
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/bin/Debug/net6.0/Ejercicio4.deps.json
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/bin/Debug/net6.0/Ejercicio4.runtimeconfig.json
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/bin/Debug/net6.0/Ejercicio4.dll
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/bin/Debug/net6.0/Ejercicio4.pdb
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/Ejercicio4.csproj.AssemblyReference.cache
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/Ejercicio4.GeneratedMSBuildEditorConfig.editorconfig
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/Ejercicio4.AssemblyInfoInputs.cache
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/Ejercicio4.AssemblyInfo.cs
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/Ejercicio4.csproj.CoreCompileInputs.cache
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/Ejercicio4.dll
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/refint/Ejercicio4.dll
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/Ejercicio4.pdb
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/Ejercicio4.genruntimeconfig.cache
+/home/dam2/Escritorio/raulgmDAD/csharp/Ejercicio4/obj/Debug/net6.0/ref/Ejercicio4.dll
