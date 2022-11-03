@@ -1,0 +1,15 @@
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\bin\Debug\net6.0\Ejercicion7.exe
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\bin\Debug\net6.0\Ejercicion7.deps.json
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\bin\Debug\net6.0\Ejercicion7.runtimeconfig.json
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\bin\Debug\net6.0\Ejercicion7.dll
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\bin\Debug\net6.0\Ejercicion7.pdb
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\Ejercicion7.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\Ejercicion7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\Ejercicion7.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\Ejercicion7.AssemblyInfo.cs
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\Ejercicion7.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\Ejercicion7.dll
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\refint\Ejercicion7.dll
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\Ejercicion7.pdb
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\Ejercicion7.genruntimeconfig.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Ejercicion7\Ejercicion7\obj\Debug\net6.0\ref\Ejercicion7.dll
