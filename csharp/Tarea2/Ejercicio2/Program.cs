@@ -15,7 +15,7 @@ public class Ejercicio2
         {
             if (split[i].Equals(palabra))
             {
-                veces ++;
+                veces++;
             }
         }
         return veces;
@@ -24,17 +24,23 @@ public class Ejercicio2
 
     public static String replacefrase(String texto, String palabra, int metodo)
     {
-
-        if (metodo == 2)
+        try
         {
-            Console.WriteLine("Introduce la nueva palabra");
-            String newPalabra = Console.ReadLine();
-            texto = texto.Replace(palabra, newPalabra);
+            if (metodo == 2)
+            {
+                Console.WriteLine("Introduce la nueva palabra");
+                String newPalabra = Console.ReadLine();
+                texto = texto.Replace(palabra, newPalabra);
 
+            }
+            else if (metodo == 3)
+            {
+                texto = texto.Replace(palabra, "");
+            }
         }
-        else if (metodo == 3)
+        catch (Exception e)
         {
-            texto = texto.Replace(palabra, "");
+            Console.WriteLine(e.GetBaseException());
         }
 
 
@@ -52,30 +58,37 @@ public class Ejercicio2
         Console.WriteLine(menu);
 
         int metodo = Int32.Parse(Console.ReadLine());
-
-        while (metodo != 4)
+        try
         {
-            Console.WriteLine("Introduce la palabra con la que desea trabajar");
-            String palabra = Console.ReadLine();
-            if (metodo > 1)
+            while (metodo != 4)
             {
-                texto = replacefrase(texto, palabra, metodo);
-                Console.WriteLine(texto);
-            }
-            else
-            {
-                Console.WriteLine("Se han encontrado "+ countPalabras(texto, palabra)+ " " + palabra) ;
-            }
+                Console.WriteLine("Introduce la palabra con la que desea trabajar");
+                String palabra = Console.ReadLine();
+                if (metodo > 1)
+                {
+                    texto = replacefrase(texto, palabra, metodo);
+                    Console.WriteLine(texto);
+                }
+                else
+                {
+                    Console.WriteLine("Se han encontrado " + countPalabras(texto, palabra) + " " + palabra);
+                }
 
-            Console.WriteLine(menu);
-            try
-            {
-                metodo = Int32.Parse(Console.ReadLine());
+                Console.WriteLine(menu);
+                try
+                {
+                    metodo = Int32.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("El metodo introducido no es valido");
+                    metodo = 4;
+                }
             }
-            catch (Exception e) {
-                Console.WriteLine("El metodo introducido no es valido");
-                metodo = 4;
-            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.GetBaseException());
         }
     }
 }

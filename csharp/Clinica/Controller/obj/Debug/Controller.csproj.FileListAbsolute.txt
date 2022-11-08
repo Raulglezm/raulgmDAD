@@ -1,0 +1,9 @@
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\bin\Debug\Controller.dll
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\bin\Debug\Controller.pdb
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\bin\Debug\Model.dll
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\bin\Debug\Model.pdb
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\obj\Debug\Controller.dll
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Controller\obj\Debug\Controller.pdb

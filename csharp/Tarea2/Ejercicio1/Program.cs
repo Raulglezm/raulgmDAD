@@ -52,22 +52,28 @@ public class Ejercicio1
         String[] split = fecha.Split("/");
 
         int dias = 0;
-
-        dias += diasMes(Int32.Parse(split[1])) - Int32.Parse(split[0]);
-        int mes = Int32.Parse(split[1]);
-
-        while (mes != 5)
+        try
         {
+            dias += diasMes(Int32.Parse(split[1])) - Int32.Parse(split[0]);
+            int mes = Int32.Parse(split[1]);
 
-            dias += diasMes(Int32.Parse(split[1]));
-            if (mes != 12)
+            while (mes != 5)
             {
-                mes++;
+
+                dias += diasMes(Int32.Parse(split[1]));
+                if (mes != 12)
+                {
+                    mes++;
+                }
+                else
+                {
+                    mes = 1;
+                }
             }
-            else
-            {
-                mes = 1;
-            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.GetBaseException());
         }
         return dias;
     }
@@ -88,28 +94,34 @@ public class Ejercicio1
         }
         else
         {
-            Console.WriteLine("Intoduzca el día: ");
-            int dia = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Intoduzca el mes: ");
-            int mes = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Intoduzca el año: ");
-            int anio = Int32.Parse(Console.ReadLine());
-
-            // codigo para el apartado 1
-            /*if (dia > diasMes(mes))
+            try
             {
-                Console.WriteLine("La fecha introducida no es valida");
+                Console.WriteLine("Intoduzca el día: ");
+                int dia = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Intoduzca el mes: ");
+                int mes = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Intoduzca el año: ");
+                int anio = Int32.Parse(Console.ReadLine());
+
+                // codigo para el apartado 1
+                /*if (dia > diasMes(mes))
+                {
+                    Console.WriteLine("La fecha introducida no es valida");
+                }
+                else
+                {
+                    String fecha = dia + "/" + mes + "/" + anio;
+                    Console.WriteLine(diasToDDC(fecha));
+                }*/
+
+                // codigo para el apartado 2
+                var value = new DateTime(anio, mes, dia);
+                Console.WriteLine(diasToDDC(value.ToString("d")));
             }
-            else
+            catch (Exception e)
             {
-                String fecha = dia + "/" + mes + "/" + anio;
-                Console.WriteLine(diasToDDC(fecha));
-            }*/
-            
-            // codigo para el apartado 2
-            var value = new DateTime(anio, mes, dia);
-            Console.WriteLine(diasToDDC(value.ToString("d")));
-
+                Console.WriteLine(e.GetBaseException());
+            }
         }
     }
 }

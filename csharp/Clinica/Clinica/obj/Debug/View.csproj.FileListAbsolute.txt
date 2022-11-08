@@ -1,0 +1,16 @@
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\bin\Debug\Clinica.exe.config
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\bin\Debug\Clinica.exe
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\bin\Debug\Clinica.pdb
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\bin\Debug\Controller.dll
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\bin\Debug\Model.dll
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\bin\Debug\Controller.pdb
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\bin\Debug\Model.pdb
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\View.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\View.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\Clinica.clinicaView.resources
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\Clinica.Properties.Resources.resources
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\View.csproj.CopyComplete
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\Clinica.exe
+C:\Users\Usuario\Documents\GitHub\raulgmDAD\csharp\Clinica\Clinica\obj\Debug\Clinica.pdb
